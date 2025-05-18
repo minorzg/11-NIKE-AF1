@@ -11,6 +11,9 @@ html {
 
 body {
     background-color: rgb(173, 47, 1);
+    width: 100%;
+
+    overflow-x: hidden;
 }
 
 header {
@@ -60,6 +63,7 @@ main {
     color: white;
     border-radius: 28px;
     height: 730px;
+    overflow-x: hidden;
 }
 
 main h1 {
@@ -84,15 +88,18 @@ main p {
     padding-top: 15px;
     font-size: 20px;
 }
-
+.photos1{
+    position: absolute;
+}
 .photos1 img{
     text-align: right;
     display: none;
-    position: absolute;
-    left: 800px;
-    top: 180px;
+    position: relative;
+    left: 190%;
+    bottom: 390px;
     border-radius: 20px;
-
+    width: 400px;
+    height: 400px;
 }
 #whiteair:checked ~.photos1 .whiteair {
     display: block;
@@ -119,7 +126,7 @@ input[type="radio"] {
 }
 
 .btn1 {
-    margin-top: 75px;
+    margin-top: 175px;
     margin-left: 140px;
     border-radius: 12px;
     font-size: 35px;
@@ -190,6 +197,8 @@ article p {
     top: 1070px;
     border-radius: 20px;
     padding: 20px;
+    max-width: 40%;
+    max-height: 65%;
 }
 /* Affichage selon le bouton sélectionné */
 #whitecap:checked ~ .photos2 .whitecap {
@@ -245,8 +254,12 @@ input[type="radio"] {
 
 footer {
     background-color: rgb(254, 242, 237);
-    text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
     padding-top: 10px;
+    height: 600px;
 }
 
 footer h1 {
